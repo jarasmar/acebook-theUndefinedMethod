@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   # Redirects to log_in if not authenticated
   before_action :authenticate_user!

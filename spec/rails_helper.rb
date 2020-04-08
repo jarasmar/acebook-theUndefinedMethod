@@ -1,8 +1,12 @@
+# frozen_string_literal: true
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV['RAILS_ENV'] ||= 'test'
-require File.expand_path('../../config/environment', __FILE__)
+require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
-abort("The Rails environment is running in production mode!") if Rails.env.production?
+if Rails.env.production?
+  abort('The Rails environment is running in production mode!')
+end
 require 'spec_helper'
 require 'rspec/rails'
 require 'simplecov'
@@ -36,7 +40,7 @@ RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include Devise::Test::IntegrationHelpers, type: :request
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
-
+  RSpec::Mocks.configuration.allow_message_expectations_on_nil = true
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
