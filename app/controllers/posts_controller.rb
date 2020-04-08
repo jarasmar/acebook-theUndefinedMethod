@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
   end
-
+#below is the post request
   def create
     @post = Post.create(post_params)
     redirect_to posts_url
