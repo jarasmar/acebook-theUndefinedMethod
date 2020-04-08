@@ -75,5 +75,16 @@ input {
  
  .float-right {
    text-align: right;
+
  }
+
+ .float-left {
+   text-align: left;
+ }
+
+ .nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+
  

@@ -16,6 +16,7 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  # to do: change to Post.find(params[:user_id])
   def profile
     @posts = Post.all
   end
