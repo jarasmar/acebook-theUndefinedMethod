@@ -7,7 +7,7 @@ RSpec.feature "Timeline", type: :feature do
     fill_in "user_password", with: "testtest"
     fill_in "user_password_confirmation", with: "testtest"
     click_button "Sign up"
-    click_button "Log out"
+    click_link "Logout"
     visit "/users/sign_in"
     fill_in "user_email", with: "test@test.com"
     fill_in "user_password", with: "testtest"
