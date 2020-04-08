@@ -27,7 +27,21 @@ And, after a quick retro, day was over, time flies when you have so many things 
 
 ## Tuesday 7th April 2020
 
-blahblah
+There is a mantra that goes along the lines of “Alone we can do so little; together we can do so much”.
+
+Having worked alone for so long, I really didn’t agree much with the mantra written above. How could that be the case? If i’m working alone, I can do things my way, I can accomplish things in my own time and I don’t have to be dependent on any person doing their part.
+
+I suppose I haven’t been a team player for most of my life but is that necessarily a bad thing? I think when it comes to learning, I need to be on my own, to read on my own, to experiment on my own, to do things on my own without the pressure of somebody else watching or me having to explain what it is i’m doing. In that sense I think I am a very efficient self learner and I believe I can learn anything within a short space of time.
+
+Though I may be able to learn and absorb information on my own, the reality is that I have to work with people at the end of the day. So for me to be thrust into a group environment is always a little bit nerve wracking as I have this innate fear of being perceived as useless. It is an irrational fear I have as I’ve demonstrated to myself numerous times that I’m not useless and that I can create things that are of value…but still this fear crops up.
+
+As the days go by though, I feel this fear subsiding moment by moment and I feel this is really because of the people in my group. I really feel we all want to put our stamp on this project and we all recognise and emphasise with this. It is part of the reason why we are willing to pick each other up and be there for one another and this environment is helping me flourish.
+
+It also helps that Jara, Sophia and Rafa are very interesting people to talk to and to share thoughts with. I am always conscious if I'm talking too much but they have made me feel at ease which I appreciate.
+
+There is a natural trust there and it is allowing me the freedom to depend on other people which allows me to think on other aspects of a project with my pair partner. When I think of it like that, I can now understand how a team that clicks and is in sync can accomplish so much more than if I ever worked alone.
+
+“Alone we can do so little; together we can do so much” …now this mantra makes a lot more sense!
 
 **Written by Nima**
 
@@ -58,7 +72,6 @@ blahblah
 <br>
 
 ## Monday 13th April 2020
-
 
 **Written by Nima**
 
