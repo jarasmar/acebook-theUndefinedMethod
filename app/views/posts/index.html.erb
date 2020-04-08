@@ -8,7 +8,7 @@
   <% @posts.reverse.each do |post| %>
     <div class="post-style">
       <p><%= simple_format(post.message) %>
-      <%= post.created_at.strftime("%H:%M, %d-%m-%Y") %></p>
+      <%= post.created_at.strftime("%H:%M, %d/%m/%Y") + "  posted by #{current_user.username}" %></p>
      
         <button>Edit</button>
         <button>Delete</button>
