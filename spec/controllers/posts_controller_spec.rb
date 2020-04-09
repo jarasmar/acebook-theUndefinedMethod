@@ -17,26 +17,26 @@ RSpec.describe PostsController, type: :controller do
   end
 
   describe 'POST /' do
+    before(:each) do
+      @post = Post.create(user_id: @user.id, message: "Hello, world!")
+    end
+
     it 'responds with 200' do
-      post = Post.create(user_id: @user.id, message: "Hello, world!")
       expect(response).to have_http_status(200)
     end
 
     it 'creates a post' do
-      post = Post.create(user_id: @user.id, message: "Hello, world!")
-      expect(post).to be_a_new(Post)
+      expect(@post).to be_a_new(Post)
     end
 
     it 'edits a post' do
-      post = Post.create(user_id: @user.id, message: "Hello, world!")
-      post.update(user_id: @user.id, message: "This is a change")
-      expect(post.message).to eq("This is a change")
+      @post.update(user_id: @user.id, message: "This is a change")
+      expect(@post.message).to eq("This is a change")
     end
 
     it 'deletes a post' do
-      post = Post.create(user_id: @user.id, message: "Hello, world!")
-      post.destroy
-      expect(post).not_to be(Post)
+      @post.destroy
+      expect(@post).not_to be(Post)
     end
   end
 
