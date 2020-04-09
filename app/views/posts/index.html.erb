@@ -1,3 +1,7 @@
+<div>
+  <%= flash[:notice] %>
+</div>
+
 <div class="post-container">
   <%= link_to new_post_path do %>
     <button>New post</button>
@@ -10,13 +14,14 @@
       <p><%= simple_format(post.message) %>
       <%= post.created_at.strftime("%H:%M, %d/%m/%Y") + "  posted by #{post.user.username}" %></p>
 
+
         <%= link_to edit_post_path(post) do %>
-        <button>Edit</button>
+          <button>Edit</button>
         <% end %>
 
-        <%= link_to new_post_path do %>
-        <button>Delete</button>
-        <% end %>
+        <button>
+          <%= link_to 'Delete', post, :method => :delete %>
+        </button>
 
     </div>
   <% end %>
