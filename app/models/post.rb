@@ -8,4 +8,8 @@ class Post < ApplicationRecord
     super(options.merge(include: [:user, comments: {include: :user}]))
   end
 
+  def post_time_limit
+    (Time.now - created_at) / 60 <= 10
+  end
+
 end

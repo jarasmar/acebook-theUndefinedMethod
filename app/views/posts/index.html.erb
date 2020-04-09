@@ -1,6 +1,3 @@
-<div>
-  <%= flash[:notice] %>
-</div>
 
 <div class="post-container">
   <%= link_to new_post_path do %>
@@ -14,14 +11,21 @@
       <p><%= simple_format(post.message) %>
       <%= post.created_at.strftime("%H:%M, %d/%m/%Y") + "  posted by #{post.user.username}" %></p>
 
-
-        <%= link_to edit_post_path(post) do %>
-          <button>Edit</button>
-        <% end %>
-
+        <% if post.user_id == current_user.id %>
+          <% if post.post_time_limit %>
+            <%= link_to edit_post_path(post) do %>
+              <button>Edit</button>
+            <% end %>
+          <% else %>
+            <input type="button" value="Edit" onclick="return alert('You can only edit posts within the first 10 minutes')">
+          <% end %>
         <button>
-          <%= link_to 'Delete', post, :method => :delete %>
+          <%= link_to 'Delete', post, :method => :delete, data: { confirm: "Are you sure?" } %>
         </button>
+        <% elsif post.user_id != current_user.id %>
+          <input type="button" value="Edit" onclick="return alert('You can only edit your own post')">
+          <input type="button" value="Delete" onclick="return alert('You can only delete your own post')">
+        <% end %>
 
     </div>
   <% end %>
