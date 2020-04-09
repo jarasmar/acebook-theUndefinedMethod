@@ -24,7 +24,7 @@ RSpec.describe PostsController, type: :controller do
 
     it 'creates a post' do
       post = Post.create(user_id: @user.id, message: "Hello, world!")
-      expect(Post.find_by(message: 'Hello, world!')).to be
+      expect(post).to be_a_new(Post)
     end
   end
 
