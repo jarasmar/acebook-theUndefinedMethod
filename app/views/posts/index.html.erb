@@ -9,11 +9,15 @@
     <div class="post-style">
       <p><%= simple_format(post.message) %>
       <%= post.created_at.strftime("%H:%M, %d/%m/%Y") + "  posted by #{post.user.username}" %></p>
-     
+
+        <%= link_to edit_post_path(post) do %>
         <button>Edit</button>
+        <% end %>
+
+        <%= link_to new_post_path do %>
         <button>Delete</button>
-   
+        <% end %>
+
     </div>
   <% end %>
 </div>
-
