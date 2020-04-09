@@ -49,7 +49,15 @@ There is a natural trust there and it is allowing me the freedom to depend on ot
 
 ## Wednesday 8th April 2020
 
-blahblah
+With our very first two-day sprint under our collective belts, we kicked off the morning with our daily stand-up.
+
+Having agreed the day before that we would spend some time in the morning running through the vaguaries of Travis, we started with a break down of what a typical .yml file should look like and what exactly Travis is trying to do when it runs its build. We definitely want all our projects to include that glorious little green badge at the top of our readmes so getting to grips with this part of the project build was important. Even more so in this case as we were also trying to include automatic deployment to Heroku via the Travis gem, something none of us have tried before.
+
+I am pleased to say that our attempts at connecting Travis to Heroku were more successful today than they were the day before, even if it did take a while for everything to push through. The prep we had done on Tuesday meant that, once the new Heroku was set up (we had to switch from Nima's account to my own as the repo's master is in my github account), all we had left to do was generate an encrypted API key and push to the master branch. This did take quite a few attempts to get right but we learnt the importance of pull requests in the process and made sure that only code merged into the master branch (and fully passing all Travis tests) would automatically upload to Heroku.
+
+While myself and Nima worked on getting Travis and Heroku up and running, Jara and Rafa continued their database mission from the day before. The Devise gem, while relatively easy to set up, was proving much harder to manually configure to include (and automatically update) a username field. Numerous attempts and much research resulted in a correctly modified user table that refused to update properly. That wasn't the only problem. Devise sets up the authentication process on Rails but doesn't automatically allow you to access all those files. As such, it does not show the appropriate views of the sign in and sign up pages, something we thought necessary for future customisation. Thankfully, we now have access to all those files (thank you Jara and Rafa!) and can properly see what is going on under the hood. The updating problem is something we are all planning to continue tackling tomorrow. It may very well require a 'back-to-basics' moment and the dismissal of Devise's services. 
+
+We had a positive catch up with our coach Eóin just after lunch, who assures us we are doing well. Rails is definitely a steep learning curve but as a team we make sure to take away the positives from all of our experiences, no matter how frustrating they may be! We finished the day further on than when we started, and with a greater understanding of the beast we are yet to fully tame.
 
 **Written by Sophia**
 
