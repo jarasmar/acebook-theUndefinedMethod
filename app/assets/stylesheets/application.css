@@ -23,7 +23,7 @@
    letter-spacing: 1.3px; 
  }
 
- button, input[type=submit] {
+ button, input[type=submit], input[type=button] {
   border: 1px solid #333;
   color: #333;
   font-family: 'Raleway', sans-serif;
