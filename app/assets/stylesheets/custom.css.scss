@@ -1,0 +1,27 @@
+@import "bootstrap";
+
+.navbar {
+  background-color: #0a79df !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.sign_up_container {
+  margin-top: 20px;
+}
+
+.centralise {
+  display: flex;
+  justify-content: center;
+}

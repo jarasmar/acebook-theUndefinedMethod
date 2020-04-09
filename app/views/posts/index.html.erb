@@ -1,19 +1,40 @@
-<div class="post-container">
-  <%= link_to new_post_path do %>
-    <button>New post</button>
-  <% end %>
-</div>
+<div class="container">
+  <div class="sign_up_container">
+    <div class="post-container">
+      <%= link_to new_post_path do %>
+      <button>New post</button>
+      <% end %>
+    </div>
+    <div class="row centralise">
+      <% @posts.reverse.each do |post| %>
+      <div class="col-sm-8 mt-3">
+        <div class="card text-left">
+          <div class="card-header">
+            Nima <%= post.created_at.strftime("%H:%M, %d-%m-%Y") %>
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p><%= simple_format(post.message) %></p>
+              <button type="button" class="btn btn-outline-primary btn-sm">Edit</button>
+              <button type="button" class="btn btn-outline-secondary btn-sm">Post</button>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
 
-<div class="post-container">
-  <% @posts.reverse.each do |post| %>
-    <div class="post-style">
-      <p><%= simple_format(post.message) %>
-      <%= post.created_at.strftime("%H:%M, %d-%m-%Y") %></p>
-     
+    <div class="post-container">
+      <% @posts.reverse.each do |post| %>
+      <div class="post-style">
+        <p><%= simple_format(post.message) %>
+          <%= post.created_at.strftime("%H:%M, %d-%m-%Y") %></p>
+
         <button>Edit</button>
         <button>Delete</button>
-   
-    </div>
-  <% end %>
-</div>
 
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
