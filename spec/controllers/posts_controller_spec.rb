@@ -26,6 +26,18 @@ RSpec.describe PostsController, type: :controller do
       post = Post.create(user_id: @user.id, message: "Hello, world!")
       expect(post).to be_a_new(Post)
     end
+
+    it 'edits a post' do
+      post = Post.create(user_id: @user.id, message: "Hello, world!")
+      post.update(user_id: @user.id, message: "This is a change")
+      expect(post.message).to eq("This is a change")
+    end
+
+    it 'deletes a post' do
+      post = Post.create(user_id: @user.id, message: "Hello, world!")
+      post.destroy
+      expect(post).not_to be(Post)
+    end
   end
 
   describe 'GET /' do
