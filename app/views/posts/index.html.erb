@@ -11,33 +11,33 @@
       <%= post.created_at.strftime("%H:%M, %d/%m/%Y") + "  posted by #{post.user.username}" %></p>
 
     <% if post.user_id == current_user.id %>
-    <% if post.post_time_limit %>
-    <%= link_to edit_post_path(post) do %>
-    <button>Edit</button>
+      <% if post.post_time_limit %>
+        <%= link_to edit_post_path(post) do %>
+          <button>Edit</button>
+        <% end %>
+      <% else %>
+        <input type="button" value="Edit" onclick="return alert('You can only edit posts within the first 10 minutes')">
+      <% end %>
+      <button>
+        <%= link_to 'Delete', post, :method => :delete, data: { confirm: "Are you sure?" } %>
+      </button>
+      <% elsif post.user_id != current_user.id %>
+        <input type="button" value="Edit" onclick="return alert('You can only edit your own post')">
+        <input type="button" value="Delete" onclick="return alert('You can only delete your own post')">
+      <% end %>
+      <button>
+        <%= link_to "Comments", new_comment_path(:post_id => post.id) %>
+      </button>
+      <% @comments = Comment.all.reverse %>
+      <% @comments.each do |comment| %>
+      <% if comment.post_id === post.id %>
+        <% @post_creater = User.find(comment.user_id) %>
+        <div class="comment-container">
+        <%= simple_format(comment.comment) %>
+        posted by <%= @post_creater.username %>
+        </div>
+      <% end %>
     <% end %>
-    <% else %>
-    <input type="button" value="Edit" onclick="return alert('You can only edit posts within the first 10 minutes')">
-    <% end %>
-    <button>
-      <%= link_to 'Delete', post, :method => :delete, data: { confirm: "Are you sure?" } %>
-    </button>
-    <% elsif post.user_id != current_user.id %>
-    <input type="button" value="Edit" onclick="return alert('You can only edit your own post')">
-    <input type="button" value="Delete" onclick="return alert('You can only delete your own post')">
-    <% end %>
-    <button>
-      <%= link_to "Comments", new_comment_path(:post_id => post.id) %>
-    </button>
-    <% @comments = Comment.all.reverse %>
-    <% @comments.each do |comment| %>
-    <% if comment.post_id === post.id %>
-    <div class="comment-container">
-      <%= simple_format(comment.comment) %>
-    </div>
-    <% end %>
-
-    <% end %>
-
   </div>
   <% end %>
 </div>

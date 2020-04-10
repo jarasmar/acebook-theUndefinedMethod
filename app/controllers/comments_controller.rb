@@ -6,8 +6,9 @@ class CommentsController < ApplicationController
 def create
   @current_id = current_user.id
   @comment = params["comment"]["comment"]
-  puts @comment
-  Comment.create(comment: @comment, user_id: @current_id, post_id: session[:post_id])
+  Comment.create(
+    comment: @comment, user_id: @current_id, 
+    post_id: session[:post_id])
   redirect_to posts_path
 end
 
