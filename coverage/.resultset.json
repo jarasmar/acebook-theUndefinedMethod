@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/models/user.rb": {
+      "/Users/nimasoufiani/education/Makers/course/week8/acebook-theUndefinedMethod/app/models/user.rb": {
         "lines": [
           null,
           null,
@@ -13,7 +13,7 @@
           null
         ]
       },
-      "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/models/application_record.rb": {
+      "/Users/nimasoufiani/education/Makers/course/week8/acebook-theUndefinedMethod/app/models/application_record.rb": {
         "lines": [
           null,
           null,
@@ -22,7 +22,7 @@
           null
         ]
       },
-      "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/helpers/application_helper.rb": {
+      "/Users/nimasoufiani/education/Makers/course/week8/acebook-theUndefinedMethod/app/helpers/application_helper.rb": {
         "lines": [
           null,
           null,
@@ -30,12 +30,67 @@
           null
         ]
       },
-      "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/controllers/posts_controller.rb": {
+      "/Users/nimasoufiani/education/Makers/course/week8/acebook-theUndefinedMethod/app/controllers/comments_controller.rb": {
         "lines": [
           null,
           null,
           1,
           1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/nimasoufiani/education/Makers/course/week8/acebook-theUndefinedMethod/app/controllers/application_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          6,
+          6,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/nimasoufiani/education/Makers/course/week8/acebook-theUndefinedMethod/app/controllers/posts_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
           null,
           null,
           1,
@@ -43,16 +98,6 @@
           null,
           null,
           1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          7,
-          null,
-          null,
-          null,
-          1,
           0,
           null,
           null,
@@ -76,35 +121,12 @@
           1,
           null,
           1,
-          1,
+          0,
           null,
           null
         ]
       },
-      "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/controllers/application_controller.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          10,
-          10,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/models/post.rb": {
+      "/Users/nimasoufiani/education/Makers/course/week8/acebook-theUndefinedMethod/app/models/post.rb": {
         "lines": [
           null,
           null,
@@ -117,13 +139,19 @@
           null,
           null,
           1,
-          1,
+          0,
           null,
           null,
           null
         ]
       },
-      "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/mailers/application_mailer.rb": {
+      "/Users/nimasoufiani/education/Makers/course/week8/acebook-theUndefinedMethod/app/models/comment.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/nimasoufiani/education/Makers/course/week8/acebook-theUndefinedMethod/app/mailers/application_mailer.rb": {
         "lines": [
           null,
           null,
@@ -135,7 +163,7 @@
         "branches": {
         }
       },
-      "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/jobs/application_job.rb": {
+      "/Users/nimasoufiani/education/Makers/course/week8/acebook-theUndefinedMethod/app/jobs/application_job.rb": {
         "lines": [
           null,
           null,
@@ -145,7 +173,7 @@
         "branches": {
         }
       },
-      "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/channels/application_cable/connection.rb": {
+      "/Users/nimasoufiani/education/Makers/course/week8/acebook-theUndefinedMethod/app/channels/application_cable/connection.rb": {
         "lines": [
           null,
           null,
@@ -157,7 +185,7 @@
         "branches": {
         }
       },
-      "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/channels/application_cable/channel.rb": {
+      "/Users/nimasoufiani/education/Makers/course/week8/acebook-theUndefinedMethod/app/channels/application_cable/channel.rb": {
         "lines": [
           null,
           null,
@@ -170,6 +198,6 @@
         }
       }
     },
-    "timestamp": 1586449846
+    "timestamp": 1586527477
   }
 }

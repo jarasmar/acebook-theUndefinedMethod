@@ -15,8 +15,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-    #@comments = Comment.where(post_id: @posts.)
-    # respond_with(@posts)
   end
 
   def edit

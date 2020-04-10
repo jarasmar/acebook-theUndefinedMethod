@@ -32,7 +32,7 @@
     <% @comments.each do |comment| %>
     <% if comment.post_id === post.id %>
     <div class="comment-container">
-      <p class="text-left"><%= comment.comment %></p>
+      <%= simple_format(comment.comment) %>
     </div>
     <% end %>
 
