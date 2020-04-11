@@ -9,6 +9,7 @@ class CommentsController < ApplicationController
     Comment.create(
       comment: @comment, user_id: @current_id, 
       post_id: session[:post_id])
+    flash[:notice] = "Comment was created successfully"
     redirect_to posts_path
   end
 
