@@ -18,7 +18,9 @@ RSpec.describe CommentsController, type: :controller do
 
   describe "POST /" do
     before(:each) do
-      @comment = Comment.create(user_id: "1", post_id: "1", comment: "this is a comment and i go on and on")
+      @comment = Comment.create(
+        user_id: "1", post_id: "1", 
+        comment: "this is a comment and i go on and on")
     end
 
     it "responds with 200" do
