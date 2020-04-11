@@ -21,20 +21,37 @@
       <button>
         <%= link_to 'Delete', post, :method => :delete, data: { confirm: "Are you sure?" } %>
       </button>
-      <% elsif post.user_id != current_user.id %>
-        <input type="button" value="Edit" onclick="return alert('You can only edit your own post')">
-        <input type="button" value="Delete" onclick="return alert('You can only delete your own post')">
-      <% end %>
+    <% elsif post.user_id != current_user.id %>
+      <input type="button" value="Edit" onclick="return alert('You can only edit your own post')">
+      <input type="button" value="Delete" onclick="return alert('You can only delete your own post')">
+    <% end %>
+      
       <button>
-        <%= link_to "Comments", new_comment_path(:post_id => post.id) %>
+        <%= link_to "New comment", new_comment_path(:post_id => post.id) %>
       </button>
-      <% @comments = Comment.all.reverse %>
+      <% @comments = Comment.all.reverse%>
       <% @comments.each do |comment| %>
       <% if comment.post_id === post.id %>
-        <% @post_creater = User.find(comment.user_id) %>
+        <% @comment_creater = User.find(comment.user_id) %>
         <div class="comment-container">
         <%= simple_format(comment.comment) %>
-        posted by <%= @post_creater.username %>
+        posted by <%= @comment_creater.username %> <br />
+        <% if comment.user_id == current_user.id %>
+          <% if comment.comment_time_limit %>
+            <%= link_to edit_comment_path(comment) do %>
+              <button>Edit comment</button>
+            <% end %>
+          <% else %>
+            <input type="button" value="Edit comment" onclick="return alert('You can only edit comments within the first 10 minutes')">
+          <% end %>
+          <button>
+            <%= link_to 'Delete comment', {controller: "comments", action: "destroy", id: comment.id}, data: { confirm: "Are you sure?" }, method: :delete %>
+          </button>
+        <% elsif comment.user_id != current_user.id %>
+          <input type="button" value="Edit comment" onclick="return alert('You can only edit your own comment')">
+          <input type="button" value="delete comment" onclick="return alert('You can only delete your own comment')">
+        <% end %>
+        
         </div>
       <% end %>
     <% end %>
