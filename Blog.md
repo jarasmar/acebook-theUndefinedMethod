@@ -65,7 +65,36 @@ We had a positive catch up with our coach Eóin just after lunch, who assures us
 
 ## Thursday 9th April 2020
 
-blahblah
+I am writing this blog entry from the future...Well that sentence can sound really mysterious but the reality is much more mundane. I had to write this entry on thursday but i decided to wait a few days , to have a little more perspective and being able to add my experience from this long easter weekend, so i am writing this the 13th of May, year of our Lord 2020 ( Just to be consistent with this Easter day, we celebrated just yesterday).
+  So i have to mentally get into the Delorean and go back where i was on Thursday in the morning.
+  I remember I had a real nice feeling. The evening before i had been able to resolve one problem in our code, yeah , something with being able to access strong params in the user controller and finally be able to set up the devise gem User authentication system. 
+ I had been with my amazing pair ,Jara, working on the Username implementation, through devise the whole day, and that last one bit prevented us to finish the ticket that we had assigned within our team. Just to put you in context (in case you know what you are talking about regarding rails and you are bored enough to read this entry blog from a nobody), this was just our second complete day studying rails, and, when i say second day, i mean that on monday morning i was in the belief that rails are those things you should use if you are train (something weird to be, but far from my intention to judge you my dear train).
+Point made, the thing is, i solved it!!, yeah, nothing glorious, just one lucky search on my continuous journey of trial-error.
+The thing is, dear train (just in case you are still with me) ,only  if you are someone who had been in my situation, trying to solve a thing that you actually don't understand not even in a minimum level and finally get to the solution, even by luck, you can understand the joy i felt. It was a simply magnificent feelin, it was ,indeed, a reminder of why i have always known that this coding world was made for me. I felt like this people....
+
+![happy_guy](https://media.giphy.com/media/rjkJD1v80CjYs/giphy.gif)
+
+Well, happy times my friend.....The days as the wind, has gone by, and again i am the miserable coder learner i have always been since i decided to start this awesome journey.
+Lets say that now i feel  more or less like this guy....
+
+![angry](https://media.giphy.com/media/3t7RAFhu75Wwg/giphy.gif)
+
+
+Ok, so, possibly you could ask...what did happen to you in just 3 days???, well, now i can clearly see that you are a train...Code happens!!. Just let me tell you, if someone sometime tell you that you can try to start coding, that don't worry!!!, everything is around on the internet, go ahead, plenty of money, nice career...etc... I don't really know anything about that, i will tell you some years from now, at the moment the only thing i know for sure is coding has the most difficult learning curve i have ever experience in my whole life, and that fact make coding an awful and amazing experience at the same time. 
+I must be some kind of masochist because, even i felt like the guy above, i am loving every second of it. I have made like 4 tutorials about rails, the latter more confusing than the previous one, i would not be able to make just a simple model without using scaffold (this is just for you, reader, in case you are a nerd and know what scaffold is) and anyway, i feel that i am loving it, and i am getting closer and closer to finally tame the beast.
+
+So at the end, after many many hours in front of the computer i don't know much more than i knew on thursday but definitely i am sure that my understanding is better and i am more able now to see the end of the tunnel ( My last train reference, i promise).
+So, maybe now, i am like this guy.....
+
+![ready](https://media.giphy.com/media/GCSIwtwqAMBTq/giphy.gif)
+
+Finally i need to speak about my team. Mark Twain said once, "Comparison is the end of joy", that is why my team for this project is so amazing, everybody in the team is just uncomparable with the others, bringing their own personalities and skills, always willing to help, listen and understand others needs.
+ Nima, Sophia and Jara, my morning star, the best thing i can say about you all, is , for me, we are like this gang. 
+ 
+![enter link description here](https://vignette.wikia.nocookie.net/cine/images/4/4f/The_goonies.jpg/revision/latest/scale-to-width-down/340?cb=20121022223610)
+
+And coming from me, believe me,  that...is to say a lot!.
+
 
 **Written by Rafa**
 
