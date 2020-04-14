@@ -30,8 +30,6 @@
         <%= link_to "New comment", new_comment_path(:post_id => post.id) %>
       </button>
       <%= link_to 'Like', {controller: "like_posts", action: "create", post_id: post.id}, method: :post %>
-      
-
       <% @comments = Comment.all.reverse%>
       <% @comments.each do |comment| %>
       <% if comment.post_id === post.id %>
