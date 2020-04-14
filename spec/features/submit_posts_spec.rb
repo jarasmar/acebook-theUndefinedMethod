@@ -17,4 +17,11 @@ RSpec.feature 'Submit posts', type: :feature do
     submit_post_2
     expect("Second message").to appear_before("First message")
   end
+
+  scenario "Can see the date and time of posts" do
+    sign_up
+    submit_post
+    post_date = Post.first.created_at.strftime('%H:%M, %d/%m/%Y')
+    expect(page).to have_content(post_date)
+  end
 end

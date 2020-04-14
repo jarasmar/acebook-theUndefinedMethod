@@ -24,5 +24,17 @@ RSpec.feature 'Comment on posts', type: :feature do
     expect(page).to have_content('This is a different comment')
   end
 
+  scenario "Can see newest comments first" do
+    sign_up
+    submit_post
+    click_link "New comment"
+    fill_in 'comment_comment', with: 'First comment'
+    click_button 'Submit'
+    click_link "New comment"
+    fill_in 'comment_comment', with: 'Second comment'
+    click_button 'Submit'
+    expect("Second comment").to appear_before("First comment")
+  end
+
 end
   
