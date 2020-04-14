@@ -44,12 +44,29 @@
           null,
           null,
           0,
+          0,
           null,
           null,
           1,
           1,
           null,
           1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
           null,
           null,
           null
@@ -111,6 +128,9 @@
           null,
           1,
           0,
+          0,
+          null,
+          0,
           null,
           0,
           0,
@@ -150,6 +170,9 @@
       "/Users/nimasoufiani/workspace/education/makers/course/week8/weekend_challenge/acebook-theUndefinedMethod/app/models/comment.rb": {
         "lines": [
           1,
+          1,
+          0,
+          null,
           null
         ]
       },
@@ -200,6 +223,6 @@
         }
       }
     },
-    "timestamp": 1586563659
+    "timestamp": 1586855292
   }
 }
