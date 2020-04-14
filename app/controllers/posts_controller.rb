@@ -32,13 +32,9 @@ class PostsController < ApplicationController
     Comment.delete(@comments)
 
     @post = Post.find(params[:id])
-    # if @post.user.id == current_user.id
       @post.destroy
       redirect_to(posts_url)
-    # else
-      # flash.now[:notice] = "This is not your post!"
-      # redirect_to(posts_url)
-    # end
+
   end
 
   private
@@ -46,4 +42,6 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:message)
   end
+
+
 end

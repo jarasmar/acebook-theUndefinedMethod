@@ -14,4 +14,5 @@ class Post < ApplicationRecord
     (Time.now - created_at) / 60 <= 10
   end
 
+
 end

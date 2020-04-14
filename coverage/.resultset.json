@@ -10,6 +10,10 @@
           null,
           1,
           null,
+          null,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -145,6 +149,8 @@
           1,
           1,
           null,
+          null,
+          null,
           null
         ]
       },
@@ -153,6 +159,8 @@
           null,
           null,
           1,
+          18,
+          1,
           1,
           1,
           null,
@@ -162,6 +170,7 @@
           null,
           1,
           1,
+          null,
           null,
           null,
           null
@@ -170,8 +179,13 @@
       "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/models/comment.rb": {
         "lines": [
           1,
+          7,
+          1,
+          1,
+          null,
           1,
           0,
+          null,
           null,
           null
         ]
@@ -223,6 +237,6 @@
         }
       }
     },
-    "timestamp": 1586855659
+    "timestamp": 1586884718
   }
 }

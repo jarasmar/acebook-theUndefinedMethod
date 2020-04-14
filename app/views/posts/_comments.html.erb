@@ -1,0 +1,25 @@
+
+<% post.comments.each do |comment| %>
+  <div class="comment-container">
+  <p><strong><%= comment.user.username %></strong>: <%= comment.comment %><br></p>
+
+    <% if comment.user_id == current_user.id %>
+
+      <% if comment.comment_time_limit %>
+        <a href="<%= edit_comment_path(comment)%>">
+          <input type="button" value="Edit comment">
+        </a>
+      <% else %>
+        <input type="button" value="Edit comment" onclick="return alert('You can only edit comments within the first 10 minutes')">
+      <% end %>
+
+      <button>
+        <%= link_to 'Delete comment', {controller: "comments", action: "destroy", id: comment.id}, data: { confirm: "Are you sure?" }, method: :delete %>
+      </button>
+
+    <% else %>
+      <input type="button" value="Edit comment" onclick="return alert('You can only edit your own comment')">
+      <input type="button" value="delete comment" onclick="return alert('You can only delete your own comment')">
+    <% end %>
+  </div>
+<% end %>
