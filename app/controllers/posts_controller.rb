@@ -15,7 +15,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-    # respond_with(@posts)
   end
 
   def edit
@@ -29,6 +28,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @comments = Comment.where(post_id: params[:id] )
+    Comment.delete(@comments)
+
     @post = Post.find(params[:id])
     # if @post.user.id == current_user.id
       @post.destroy

@@ -1,0 +1,9 @@
+<div class="post-container">
+  <%= form_for @comment do |form| %>
+  <%= form.label :comment %>
+  </br>
+  <%= form.text_area :comment, :cols => 30, :rows => 10 %>
+  </br>
+  <%= form.submit "Submit" %>
+  <% end %>
+</div>
