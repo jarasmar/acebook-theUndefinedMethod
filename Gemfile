@@ -46,6 +46,7 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'selenium-webdriver'
   gem 'simplecov', require: false, group: :test
+  gem 'orderly'
 end
 
 # group :production do
