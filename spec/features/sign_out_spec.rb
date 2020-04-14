@@ -2,8 +2,8 @@
 
 require 'rails_helper'
 
-RSpec.feature 'Sign in', type: :feature do
-  scenario 'You can sign in' do
+RSpec.feature 'Sign out', type: :feature do
+  scenario 'You can sign out' do
     sign_up
     click_link 'Logout'
     expect(page).not_to have_content("New post")

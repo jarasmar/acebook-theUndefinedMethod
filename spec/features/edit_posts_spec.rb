@@ -4,14 +4,12 @@ require 'rails_helper'
 
 RSpec.feature 'Edit posts', type: :feature do
 
-  # scenario "user can update an existing post" do
-  #   sign_up
-  #   submit_post
-  #   click_link "Edit"
-  #   fill_in "edit_message", with: 'First message, plus edit'
-  #   click_link "save changes"
-  #   expect(page).to have_content "First message, plus edit"
-  # end
+  scenario "user can update an existing post" do
+    sign_up
+    submit_post
+    click_link "Edit"
+    expect(page).to have_button "Save Changes"
+  end
 
   scenario "user cannot update someone else's post" do
     sign_up
@@ -22,5 +20,13 @@ RSpec.feature 'Edit posts', type: :feature do
     expect(page).not_to have_content "First message"
   end
 
+  scenario "user cannot update a post after 10 minutes" do
+    sign_up
+    submit_post
+    Timecop.travel(Time.now + 15.minutes) do
+      click_link "Edit"
+      expect(page).not_to have_link "Save Changes"
+    end
+  end
 
 end

@@ -46,7 +46,10 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'selenium-webdriver'
   gem 'simplecov', require: false, group: :test
+  # Rspec matcher for asserting that this appears_before(that) 
   gem 'orderly'
+  # "time travel" and "time freezing" to test time-dependent code
+  gem 'timecop'
 end
 
 # group :production do
