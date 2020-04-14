@@ -9,6 +9,14 @@ RSpec.feature 'Submit posts', type: :feature do
     expect(page).to have_content('First message')
   end
 
+  scenario "Can submit post with multiple breaks" do
+    sign_up
+    click_link 'New post'
+    fill_in 'post_message', with: 'First message\nSecond Line'
+    click_button 'Submit'
+    expect(page).to have_content("First message\\nSecond Line")
+  end
+
   scenario "Can see newest posts first" do
     sign_up
     submit_post
