@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   root to: redirect('/posts')
   resources :comments
   resources :posts
+  resources :like_posts, only: [:create, :destroy]
 end
