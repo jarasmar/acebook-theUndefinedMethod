@@ -100,25 +100,12 @@ And coming from me, believe me,  that...is to say a lot!.
 
 <br>
 
-## Friday 10th April 2020
-
-blahblah
-
-**Written by Jara**
-
-<br>
-
-## Monday 13th April 2020
-
-**Written by Nima**
-
-<br>
 
 ## Tuesday 14th April 2020
 
 blahblah
 
-**Written by Sophia**
+**Written by Jara**
 
 <br>
 
@@ -126,7 +113,7 @@ blahblah
 
 blahblah
 
-**Written by Rafa**
+**Written by Nima**
 
 <br>
 
@@ -134,7 +121,7 @@ blahblah
 
 blahblah
 
-**Written by Jara**
+**Written by Sophia**
 
 <br>
 
@@ -142,4 +129,4 @@ blahblah
 
 blahblah
 
-**Written by Nima**
+**Written by Rafa**
