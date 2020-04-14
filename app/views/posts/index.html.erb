@@ -5,7 +5,7 @@
 </div>
 
 <div class="post-container">
-  <% @posts.reverse.each do |post| %>
+  <% @posts.each do |post| %>
   <div class="post-style">
     <p><%= simple_format(post.message) %>
       <%= post.created_at.strftime("%H:%M, %d/%m/%Y") + "  posted by #{post.user.username}" %></p>
@@ -29,7 +29,7 @@
       <button>
         <%= link_to "New comment", new_comment_path(:post_id => post.id) %>
       </button>
-      <% @comments = Comment.all.reverse%>
+      <% @comments = Comment.all%>
       <% @comments.each do |comment| %>
       <% if comment.post_id === post.id %>
         <% @comment_creater = User.find(comment.user_id) %>
