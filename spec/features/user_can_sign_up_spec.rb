@@ -2,13 +2,19 @@
 
 require 'rails_helper'
 
-RSpec.feature 'Timeline', type: :feature do
-  scenario 'You can sign up' do
+RSpec.feature 'Sign up', type: :feature do
+
+  scenario "User asked to sign up with username, email and password" do
     visit '/users/sign_up'
-    fill_in 'user_email', with: 'test@test.com'
-    fill_in 'user_password', with: 'testtest'
-    fill_in 'user_password_confirmation', with: 'testtest'
-    click_button 'Sign up'
+    expect(page).to have_field("Username")
+    expect(page).to have_field("user_email")
+    expect(page).to have_field("user_password")
+    expect(page).to have_field("user_password_confirmation")
+  end
+
+  scenario 'You can sign up' do
+    sign_up
     expect(page).to have_content('Welcome! You have signed up successfully.')
   end
+
 end
