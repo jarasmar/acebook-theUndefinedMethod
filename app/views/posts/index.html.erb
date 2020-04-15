@@ -10,10 +10,11 @@
     <p><%= simple_format(post.message) %>
       <%= post.created_at.strftime("%H:%M, %d/%m/%Y") + "  posted by #{post.user.username}" %></p>
       <%= link_to 'Like', {controller: "like_posts", action: "create", post_id: post.id}, method: :post %><br>
+      <p> <%= LikePost.where(post_id: post.id).length %> Likes </p>
     <% if post.user_id == current_user.id %>
-    
+
       <% if post.post_time_limit %>
-      
+
         <%= link_to edit_post_path(post) do %>
           <button>Edit</button>
         <% end %>
@@ -29,14 +30,14 @@
       <input type="button" value="Edit" onclick="return alert('You can only edit your own post')">
       <input type="button" value="Delete" onclick="return alert('You can only delete your own post')">
     <% end %>
-      
+
     <button>
       <%= link_to "New comment", new_comment_path(:post_id => post.id) %>
     </button>
-    
+
     <%= render "posts/comments", post: post %>
-    
+
     </div>
-     
+
   <% end %>
 </div>

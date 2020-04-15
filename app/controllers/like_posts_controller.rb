@@ -1,12 +1,29 @@
 class LikePostsController < ApplicationController
 
   def create
-    LikePost.create(user_id: current_user.id , post_id: params[:post_id])
-    redirect_to posts_path
+    @likePost = LikePost.where(user_id: current_user.id, post_id: params[:post_id])
+
+    if @likePost.length == 0
+      like
+      redirect_to posts_path
+    else
+      unlike
+      redirect_to posts_path
+    end
   end
 
   def destroy
-    
+
+  end
+
+  private
+
+  def like
+    LikePost.create(user_id: current_user.id , post_id: params[:post_id])
+  end
+
+  def unlike
+    LikePost.destroy(@likePost[0].id)
   end
 
 end
