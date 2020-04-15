@@ -17,6 +17,7 @@ RSpec.feature 'Edit posts', type: :feature do
     click_link 'Logout'
     sign_up_second_user
     click_link "Edit"
+    # This is because of the pop up box but I can't work out how to test for that in particular"
     expect(page).not_to have_content "First message"
   end
 
