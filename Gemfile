@@ -15,7 +15,7 @@ group :development do
 end
 
 gem 'travis'
-
+gem 'jquery-rails'
 gem 'pg'
 # Use Puma as the app server
 gem 'devise'

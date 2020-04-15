@@ -3,23 +3,22 @@
   <button>New post</button>
   <% end %>
 </div>
-
 <div class="post-container">
   <% @posts.each do |post| %>
   <div class="post-style">
     <p><%= simple_format(post.message) %>
       <%= post.created_at.strftime("%H:%M, %d/%m/%Y") + "  posted by #{post.user.username}" %></p>
-
-      <%= link_to like_posts_path(post_id: post.id), method: :post do %>
-        <% @likePosts = LikePost.where(user_id: current_user.id, post_id: post.id).length %>
-          <% if @likePosts == 0 %>
-            <i class="fa fa-heart unlike fa-2x"></i>
-          <% else %>
-            <i class="fa fa-heart like fa-2x"></i>
-          <% end %>
-      <% end %>
-
-      <p> <%= LikePost.where(post_id: post.id).length %> Likes </p>
+      
+        <%= link_to like_posts_path(post_id: post.id),:remote => true, method: :post do %>
+          <% @likePosts = LikePost.where(user_id: current_user.id, post_id: post.id).length %>
+            <% if @likePosts == 0 %>
+              <i id="heart" class="fa fa-heart unlike fa-2x"></i>
+            <% else %>
+              <i id="heart" class="fa fa-heart like fa-2x"></i>
+            <% end %>
+        <% end %>
+      
+      <p id="like-count"><%= LikePost.where(post_id: post.id).length %> Likes</p>
 
     <% if post.user_id == current_user.id %>
 
