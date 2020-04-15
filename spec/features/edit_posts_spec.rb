@@ -24,7 +24,7 @@ RSpec.feature 'Edit posts', type: :feature do
   scenario "user cannot update a post after 10 minutes" do
     sign_up
     submit_post
-    Timecop.travel(Time.now + 15.minutes) do
+    Timecop.freeze(Time.now + 15.minutes) do
       click_link "Edit"
       expect(page).not_to have_link "Save Changes"
     end
