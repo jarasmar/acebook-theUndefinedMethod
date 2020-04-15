@@ -1,5 +1,18 @@
 
-Logged in as <strong><%= current_user.username %></strong>.
+<%= link_to new_post_path do %>
+  <button id='new-post-btn'>New post</button>
+<% end %>
 
-<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+Hello <strong><%= current_user.username %></strong>
+
+<%= link_to edit_user_registration_path, :class => 'navbar-link' do %>
+  <span>
+    <i class="fa fa-edit fa-2x"></i>
+  </span>
+<% end %>
+
+<%= link_to destroy_user_session_path, method: :delete, :class => 'navbar-link' do %>
+  <span>
+    <i class="fa fa-power-off fa-2x"></i>
+  </span>
+<% end %>

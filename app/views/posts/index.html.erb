@@ -1,14 +1,11 @@
-<div class="post-container">
-  <%= link_to new_post_path do %>
-  <button>New post</button>
-  <% end %>
-</div>
+
 
 <div class="post-container">
   <% @posts.each do |post| %>
   <div class="post-style">
-    <p><%= simple_format(post.message) %>
-      <%= post.created_at.strftime("%H:%M, %d/%m/%Y") + "  posted by #{post.user.username}" %></p>
+    <div class='post_message'><p><%= simple_format(post.message) %></p></div>
+      <p class='post_author'> <%= "Posted by "%><strong><%= "#{post.user.username}"%></strong></p>
+      <p class='post_date'><%= post.created_at.strftime("%H:%M, %d/%m/%Y")%></p>
 
       <%= link_to like_posts_path(post_id: post.id), method: :post do %>
         <% @likePosts = LikePost.where(user_id: current_user.id, post_id: post.id).length %>
@@ -19,7 +16,7 @@
           <% end %>
       <% end %>
 
-      <p> <%= LikePost.where(post_id: post.id).length %> Likes </p>
+      <p class='like_count'> <%= LikePost.where(post_id: post.id).length %> Likes </p>
 
     <% if post.user_id == current_user.id %>
 
@@ -45,7 +42,12 @@
       <%= link_to "New comment", new_comment_path(:post_id => post.id) %>
     </button>
 
+    <br/>
+    <br/>
+
     <%= render "posts/comments", post: post %>
+
+    <br/>
 
     </div>
 

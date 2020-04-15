@@ -15,15 +15,37 @@
  *= require font-awesome
  */
 
-
+ * {
+ margin-top: 0;
+ margin-left: 0;
+ padding:0;
+ }
 
 body {
-  margin: 20px;
   text-align: center;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 12px;
   letter-spacing: 1.3px;
+  background-color: #f0f0f5;
+  padding-top: 90px;
+}
+
+.navbar-text {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-size: 14px;
+  letter-spacing: 1.3px;
+  background-color: white;
+  padding: 20px 0 20px 0;
+  box-shadow: 0 0 6px 0;
+}
+
+#new-post-btn {
+  margin:auto;
+  display: block;
+  margin-bottom: 0;
 }
 
 button,
@@ -42,6 +64,7 @@ input[type="button"] {
   margin-bottom: 10px;
   box-shadow: 0 8px 6px -6px black;
 }
+
 
 form {
   display: flex;
@@ -62,30 +85,47 @@ input {
 }
 
 .post-style {
-  border: 1px solid grey;
   margin: 10px;
   width: 30%;
   padding: 10px;
   text-align: center;
   font-size: 14px;
-  box-shadow: 0 8px 6px -6px black;
+  box-shadow: -6px 8px 8px -6px black;
+  background-color: white;
 }
 
-.navbar-text {
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 1.3px;
+.post_message {
+  font-size: 18px;
 }
+
+.post_author {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f0f0f5;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #52527a;
+  font-size: 12px;
+}
+
+.post_date {
+  color: #b3b3cc;
+  font-size: 12px;
+}
+
 
 .float-right {
   text-align: right;
 }
 
 .comment-container {
-  border: 1px solid black;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5%;
   padding: 0.4em;
-  background-color: #e0e0eb;
+  background-color: #f0f0f5;
 }
 
 .text-left {
@@ -98,10 +138,15 @@ input {
 }
 
 .unlike {
-  color: #555;
+  color: #52527a;
 }
 
 i:hover {
     color: red;
     cursor: pointer;
   }
+
+.like_count {
+  color: #52527a;
+  font-size: 12px;
+}
