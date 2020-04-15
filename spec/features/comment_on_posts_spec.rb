@@ -5,11 +5,9 @@ RSpec.feature 'Comment on posts', type: :feature do
   scenario 'Can comment on their own post and view them' do
     sign_up
     submit_post
-    click_link "New comment"
-    fill_in 'comment_comment', with: 'what a lovely comment'
-    click_button 'Submit'
+    first_comment
 
-    expect(page).to have_content('what a lovely comment')
+    expect(page).to have_content('First comment')
   end
 
   scenario "Can comment on someone else's post and view them" do
@@ -17,23 +15,39 @@ RSpec.feature 'Comment on posts', type: :feature do
     submit_post
     click_link 'Logout'
     sign_up_second_user
-    click_link "New comment"
-    fill_in 'comment_comment', with: 'This is a different comment'
-    click_button 'Submit'
+    second_comment
 
-    expect(page).to have_content('This is a different comment')
+    expect(page).to have_content('Second comment')
   end
 
   scenario "Can see newest comments first" do
     sign_up
     submit_post
-    click_link "New comment"
-    fill_in 'comment_comment', with: 'First comment'
-    click_button 'Submit'
-    click_link "New comment"
-    fill_in 'comment_comment', with: 'Second comment'
-    click_button 'Submit'
+    first_comment
+    second_comment
+
     expect("Second comment").to appear_before("First comment")
+  end
+
+  scenario "Can delete your own comments" do
+    sign_up
+    submit_post
+    first_comment
+    click_link "Delete comment"
+
+    expect(page).not_to have_content('First comment')
+  end
+
+  scenario "Cannot delete someone else's comment" do
+    sign_up
+    submit_post
+    first_comment
+    click_link 'Logout'
+    sign_up_second_user
+    visit '/posts'
+    click_button "delete comment"
+
+    expect(page).to have_content('First comment')
   end
 
 end
