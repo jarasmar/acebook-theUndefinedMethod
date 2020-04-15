@@ -12,7 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
+
+
 
 body {
   margin: 20px;
@@ -91,3 +94,15 @@ input {
   text-align: left;
 }
 
+.like {
+  color: red;
+}
+
+.unlike {
+  color: #555;
+}
+
+i:hover {
+    color: red;
+    cursor: pointer;
+  }

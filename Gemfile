@@ -37,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'font-awesome-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
@@ -46,7 +48,7 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'selenium-webdriver'
   gem 'simplecov', require: false, group: :test
-  # Rspec matcher for asserting that this appears_before(that) 
+  # Rspec matcher for asserting that this appears_before(that)
   gem 'orderly'
   # "time travel" and "time freezing" to test time-dependent code
   gem 'timecop'
