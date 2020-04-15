@@ -1,9 +1,21 @@
 
 <% post.comments.each do |comment| %>
   <div class="comment-container">
-  
+
   <p><strong><%= comment.user.username %></strong>: <%= comment.comment %><br></p>
   <p><%= time_ago_in_words post.created_at %> ago</p>
+
+  <%= link_to like_comments_path(comment_id: comment.id), method: :post do %>
+    <% @likeComments = LikeComment.where(user_id: current_user.id, comment_id: comment.id).length %>
+      <% if @likeComments == 0 %>
+        <i class="fa fa-heart unlike fa-2x"></i>
+      <% else %>
+        <i class="fa fa-heart like fa-2x"></i>
+      <% end %>
+  <% end %>
+
+  <p> <%= LikeComment.where(comment_id: comment.id).length %> Likes </p>
+
     <% if comment.user_id == current_user.id %>
 
       <% if comment.comment_time_limit %>

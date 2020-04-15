@@ -3,11 +3,12 @@
     <head>
       <title>Acebook</title>
       <%= csrf_meta_tags %>
-
-      <%= stylesheet_link_tag    'application', media: 'all' %>
+      <link href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
+      <%= stylesheet_link_tag 'application', media: 'all' %>
       <%= javascript_include_tag 'application' %>
+
     </head>
-    
+
     <body>
 
     <nav>
@@ -26,11 +27,9 @@
       <% if alert %>
         <p class="alert alert-danger"><%= alert %></p>
       <% end %>
-      
+
       <%= yield %>
 
     </body>
-    
+
   </html>
-
-

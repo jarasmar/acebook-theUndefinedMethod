@@ -9,11 +9,22 @@
   <div class="post-style">
     <p><%= simple_format(post.message) %>
       <%= post.created_at.strftime("%H:%M, %d/%m/%Y") + "  posted by #{post.user.username}" %></p>
-      <%= link_to 'Like', {controller: "like_posts", action: "create", post_id: post.id}, method: :post %><br>
+
+      <%= link_to like_posts_path(post_id: post.id), method: :post do %>
+        <% @likePosts = LikePost.where(user_id: current_user.id, post_id: post.id).length %>
+          <% if @likePosts == 0 %>
+            <i class="fa fa-heart unlike fa-2x"></i>
+          <% else %>
+            <i class="fa fa-heart like fa-2x"></i>
+          <% end %>
+      <% end %>
+
+      <p> <%= LikePost.where(post_id: post.id).length %> Likes </p>
+
     <% if post.user_id == current_user.id %>
-    
+
       <% if post.post_time_limit %>
-      
+
         <%= link_to edit_post_path(post) do %>
           <button>Edit</button>
         <% end %>
@@ -29,14 +40,14 @@
       <input type="button" value="Edit" onclick="return alert('You can only edit your own post')">
       <input type="button" value="Delete" onclick="return alert('You can only delete your own post')">
     <% end %>
-      
+
     <button>
       <%= link_to "New comment", new_comment_path(:post_id => post.id) %>
     </button>
-    
+
     <%= render "posts/comments", post: post %>
-    
+
     </div>
-     
+
   <% end %>
 </div>

@@ -12,7 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
+
+
 
 body {
   margin: 20px;
@@ -81,9 +84,8 @@ input {
 
 .comment-container {
   border: 1px solid black;
-  text-align: left;
   padding: 0.4em;
-
+  background-color: #e0e0eb;
 }
 
 .text-left {
@@ -91,3 +93,15 @@ input {
   text-align: left;
 }
 
+.like {
+  color: red;
+}
+
+.unlike {
+  color: #555;
+}
+
+i:hover {
+    color: red;
+    cursor: pointer;
+  }
