@@ -39,6 +39,8 @@ I want to be able to make a post
 
 ## Planning
 
+**Week 1**
+
 **Day 1**
 
 - Setting up of our group and responsibilities, including our [Trello board](https://trello.com/b/adiRFheq/the-undefined-method) and [daily blog](https://github.com/Kittaru87/acebook-theUndefinedMethod/blob/master/Blog.md)
