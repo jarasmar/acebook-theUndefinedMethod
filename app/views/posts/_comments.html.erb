@@ -20,7 +20,7 @@
 
       <% if comment.comment_time_limit %>
         <a href="<%= edit_comment_path(comment)%>">
-          <input type="button" value="Edit comment">
+          <input type="button" value="Edit comment" class="edit-comment-btn">
         </a>
       <% else %>
         <input type="button" value="Edit comment" onclick="return alert('You can only edit comments within the first 10 minutes')">
