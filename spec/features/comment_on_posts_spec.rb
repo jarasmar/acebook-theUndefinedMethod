@@ -46,5 +46,11 @@ RSpec.feature 'Comment on posts', type: :feature do
     expect(page).to have_content('First comment')
   end
 
+  scenario "Can see how long ago someone posted their comment" do
+    first_comment
+
+    expect(page).to have_content("less than a minute ago")
+  end
+
 end
   
