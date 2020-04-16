@@ -187,7 +187,7 @@
       "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/models/comment.rb": {
         "lines": [
           1,
-          226,
+          227,
           1,
           1,
           null,
@@ -203,7 +203,7 @@
           null,
           null,
           1,
-          208,
+          209,
           1,
           1,
           1,
@@ -271,10 +271,10 @@
         "lines": [
           null,
           null,
-          0,
-          0,
-          0,
-          0
+          null,
+          null,
+          null,
+          null
         ],
         "branches": {
         }
@@ -283,8 +283,11 @@
         "lines": [
           null,
           null,
-          0,
-          0
+          null,
+          null,
+          null,
+          null,
+          null
         ],
         "branches": {
         }
@@ -293,10 +296,10 @@
         "lines": [
           null,
           null,
-          0,
-          0,
-          0,
-          0
+          null,
+          null,
+          null,
+          null
         ],
         "branches": {
         }
@@ -305,15 +308,15 @@
         "lines": [
           null,
           null,
-          0,
-          0,
-          0,
-          0
+          null,
+          null,
+          null,
+          null
         ],
         "branches": {
         }
       }
     },
-    "timestamp": 1587040177
+    "timestamp": 1587041809
   }
 }

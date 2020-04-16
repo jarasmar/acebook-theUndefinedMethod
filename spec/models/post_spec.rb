@@ -22,5 +22,16 @@ RSpec.describe Post, type: :model do
     end
   end
   
-  
+  describe "#as_json" do
+  # attempt to test this method - doesn't quite work though
+    it 'attachs user_id to both post and comments' do
+      @user = User.create { :user }
+      @post = Post.create(message: "hi there folks")
+      @comment = Comment.create(comment: "this is a comment")
+
+    expect(@post.user_id).to eq @user.id  
+    expect(@comment.user_id).to eq @user.id
+    end
+  end
+
 end
