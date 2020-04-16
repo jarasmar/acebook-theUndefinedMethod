@@ -18,15 +18,9 @@
 
 
 body {
-  margin: 20px;
-  text-align: center;
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  letter-spacing: 1.3px;
 }
 
-button,
+/* button,
 input[type="submit"],
 input[type="button"] {
   border: 1px solid #333;
@@ -41,7 +35,7 @@ input[type="button"] {
   display: inline-block;
   margin-bottom: 10px;
   box-shadow: 0 8px 6px -6px black;
-}
+} */
 
 form {
   display: flex;
@@ -101,7 +95,7 @@ input {
   color: #555;
 }
 
-i:hover {
+/* i:hover {
     color: red;
     cursor: pointer;
-  }
+  } */

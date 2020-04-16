@@ -32,8 +32,8 @@ class PostsController < ApplicationController
     Comment.delete(@comments)
 
     @post = Post.find(params[:id])
-      @post.destroy
-      redirect_to(posts_url)
+    @post.destroy
+    redirect_to(posts_url)
 
   end
 
