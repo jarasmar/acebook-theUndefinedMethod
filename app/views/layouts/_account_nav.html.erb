@@ -1,13 +1,25 @@
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand">ACEBOOK</a>
-  <a class="navbar-brand"><%= current_user.username %></a>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand">ACEBOOK</a>
+
+<!--  Show this only on mobile to medium screens  -->
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+
+<!--  Use flexbox utility classes to change how the child elements are justified  -->
+  <div class="collapse navbar-collapse justify-content-between" id="navbarToggle">
+
+<!--   Show this only lg screens and up   -->
+    <a class="navbar-brand d-lg-none d-lg-block">
+    </a>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a class="navbar-brand"><%= current_user.username %></a>
+      </li>
       <li class="nav-item active">
         <a class="nav-link" href="/posts">
           <svg class="bi bi-house-door" width="2.5em" height="2.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -17,7 +29,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <%= link_to edit_user_registration_path, :class => 'nav-link' do %> 
+        <%= link_to edit_user_registration_path, :class => 'nav-link' do %>
           <svg class="bi bi-pencil-square" width="2.5em" height="2.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M15.502 1.94a.5.5 0 010 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 01.707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 00-.121.196l-.805 2.414a.25.25 0 00.316.316l2.414-.805a.5.5 0 00.196-.12l6.813-6.814z"/>
             <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-6a.5.5 0 00-1 0v6a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5H9a.5.5 0 000-1H2.5A1.5 1.5 0 001 2.5v11z" clip-rule="evenodd"/>
@@ -36,4 +48,3 @@
     </ul>
   </div>
 </nav>
-

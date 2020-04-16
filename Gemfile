@@ -17,7 +17,7 @@ end
 gem 'travis'
 
 gem 'pg'
-gem 'bootstrap', '~> 4.4.1'
+gem 'bootstrap'
 gem 'jquery-rails'
 # Use Puma as the app server
 gem 'devise'
