@@ -6,7 +6,7 @@ $(function(){
 
     $.ajax({
       url: "/posts/like_post/"+post_id,
-      method: "GET"
+      method: "POST"
     }).done(function(response){
         console.log(response)
     })

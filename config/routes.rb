@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   root to: redirect('/posts')
   resources :comments
   resources :posts
-  get "/post/like_post/:post_id" => "likes#save_like", as: :like_post
+  resources :like_posts, only: [:create]
   resources :like_comments, only: [:create]
 end
