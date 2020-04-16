@@ -63,13 +63,13 @@
           null,
           null,
           1,
-          1,
+          0,
           null,
           null,
           1,
-          1,
-          1,
-          1,
+          0,
+          0,
+          0,
           null,
           null,
           1,
@@ -151,7 +151,7 @@
           null,
           null,
           1,
-          99,
+          98,
           null,
           null,
           1,
@@ -187,12 +187,12 @@
       "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/models/comment.rb": {
         "lines": [
           1,
-          227,
+          222,
           1,
           1,
           null,
           1,
-          20,
+          19,
           null,
           null,
           null
@@ -203,7 +203,7 @@
           null,
           null,
           1,
-          209,
+          206,
           1,
           1,
           1,
@@ -213,7 +213,7 @@
           null,
           null,
           1,
-          49,
+          48,
           null,
           null,
           null,
@@ -317,6 +317,6 @@
         }
       }
     },
-    "timestamp": 1587044793
+    "timestamp": 1587045170
   }
 }
