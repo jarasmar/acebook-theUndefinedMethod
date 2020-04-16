@@ -34,3 +34,15 @@ def submit_post_2
   fill_in 'post_message', with: 'Second message'
   click_button 'Submit'
 end
+
+def first_comment
+  click_link "New comment"
+  fill_in 'comment_comment', with: 'First comment'
+  click_button 'Submit'
+end
+
+def second_comment
+  click_link "New comment"
+  fill_in 'comment_comment', with: 'Second comment'
+  click_button 'Submit'
+end
