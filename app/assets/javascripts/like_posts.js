@@ -1,2 +1,14 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+
+$(function(){
+// jquery loaded
+  $(".post-like").on("click", function(){
+    var post_id = $(this).data('id');
+
+    $.ajax({
+      url: "/posts/like_post/"+post_id,
+      method: "GET"
+    }).done(function(response){
+        console.log(response)
+    })
+  })
+});

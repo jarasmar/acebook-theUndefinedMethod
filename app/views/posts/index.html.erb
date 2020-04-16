@@ -1,3 +1,5 @@
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
 <div class="post-container">
   <%= link_to new_post_path do %>
   <button>New post</button>
@@ -9,16 +11,10 @@
   <div class="post-style">
     <p><%= simple_format(post.message) %>
       <%= post.created_at.strftime("%H:%M, %d/%m/%Y") + "  posted by #{post.user.username}" %></p>
-    
-      <%= link_to like_posts_path(post_id: post.id), method: :post, class: "like_post_test" do %>
-        <% @likePosts = LikePost.where(user_id: current_user.id, post_id: post.id).length %>
-          <% if @likePosts == 0 %>
-          <i class="fa fa-heart unlike fa-2x"></i>
-          <% else %>
-          <i class="fa fa-heart like fa-2x"></i>
-          <% end %>
-      <% end %>
-
+      
+      <i class="fa fa-heart like-<%= post.id %> <%= 'active' if post_liked_by_user?(post.id) %> fa-2x post-like" data-id="<%= post.id %>" ></i>
+     
+   
       <p> <%= LikePost.where(post_id: post.id).length %> Likes </p>
 
     <% if post.user_id == current_user.id %>
