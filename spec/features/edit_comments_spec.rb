@@ -12,8 +12,10 @@ RSpec.feature 'Edit comments', type: :feature do
 
   scenario "Can edit your own comment", js: true do
     first(:css, ".edit-comment-btn").click
+    fill_in "comment[comment]", with: "updated comment"
+    click_button("Save Changes")
 
-    expect(page).to have_button("Save Changes")
+    expect(page).to have_content("updated comment")
   end
 
   scenario "Cannot edit someone else's comment" do
