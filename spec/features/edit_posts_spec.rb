@@ -11,7 +11,7 @@ RSpec.feature 'Edit posts', type: :feature do
     expect(page).to have_button "Save Changes"
   end
 
-  scenario "Can edit their own post", js: true do
+  scenario "Can edit their own post" do
     sign_up
     submit_post
     click_link "Edit"
