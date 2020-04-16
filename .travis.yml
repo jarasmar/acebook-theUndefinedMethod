@@ -1,3 +1,6 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=ABC123
 language: ruby
 rvm:
 - 2.5.0
@@ -6,10 +9,15 @@ services:
 before_script:
 - bundle install
 - psql -c 'create database pgapp_test;' -U postgres
+- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+- chmod +x ./cc-test-reporter
+- ./cc-test-reporter before-build
 - bin/rails db:migrate
 dist: trusty
 script:
 - bundle exec rspec
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 deploy:
   provider: heroku
   api_key:
