@@ -6,7 +6,8 @@ RSpec.describe LikePostsController, type: :controller do
     controller.stub(:authenticate_user!).and_return(true)
     sign_in @user
     @post = Post.create(user_id: @user.id, message: "Hello, world!")
-    @like = LikePost.create(user_id: @user.id, post_id: @post.id)
+    @comment = Comment.create(user_id: @user.id, post_id: @post.id, comment: "Hello, world!")
+    @like = LikeComment.create(user_id: @user.id, comment_id: @comment.id)
   end
 
   describe 'POST /' do
@@ -16,12 +17,12 @@ RSpec.describe LikePostsController, type: :controller do
     end
 
     it 'creates a like' do
-      expect(@like).to be_a_new(LikePost)
+      expect(@like).to be_a_new(LikeComment)
     end
 
     it 'deletes a like' do
       @like.destroy
-      expect(@like).not_to be(LikePost)
+      expect(@like).not_to be(LikeComment)
     end
 
   end
