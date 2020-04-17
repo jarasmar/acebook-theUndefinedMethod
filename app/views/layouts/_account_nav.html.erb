@@ -3,8 +3,13 @@
 
   <a href="/posts" class="navbar-brand">ACEBOOK</a>
 
-<!--  Show this only on mobile to medium screens  -->
 
+  <%= link_to new_post_path do %>
+      <button type="button" class="btn btn-outline-primary btn-lg" style="position: absolute; left: 50%; margin-left: -50px !important; display: block; top: 9px;">
+      New post</button>
+  <% end %>
+
+<!--  Show this only on mobile to medium screens  -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -15,12 +20,6 @@
 <!--   Show this only lg screens and up   -->
     <a class="navbar-brand d-lg-none d-lg-block">
     </a>
-
-    <%= link_to new_post_path do %>
-      <button type="button" class="btn btn-outline-primary" style="position: absolute; left: 50%; margin-left: -50px !important; display: block; top: 9px;">
-      New post</button>
-    <% end %>
-
     <ul class="nav navbar-nav navbar-right">
       <li>
          <a class="navbar-brand">Hello <%=  current_user.username %></a>

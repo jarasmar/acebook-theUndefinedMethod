@@ -10,17 +10,9 @@
           <%# if time limit is reached%>
           <% if post.user_id == current_user.id %>
             <% if post.post_time_limit %> 
-              <%= link_to edit_post_path(post) do %>
-                <button type="button" class="btn btn-primary">Edit</button>
-              <% end %>
-              <%= link_to new_comment_path(:post_id => post.id) do %>
-                <button type="button" class="btn btn-primary">Comment</button>
-              <% end %>
+              <%= render partial: "posts/post_buttons_within_time_limit", locals: {post: post} %>  
             <% else %>
-              <button type="button" class="btn btn-primary" onclick="return alert('You can only edit posts within the first 10 minutes')">Edit</button>
-              <%= link_to new_comment_path(:post_id => post.id) do %>
-                <button type="button" class="btn btn-primary">Comment</button>
-              <% end %> 
+              <%= render partial: "posts/post_buttons_not_within_time_limit", locals: {post: post} %>
             <% end %>
             <%= link_to 'Delete', post, :method => :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary" %>
           <% else %>
