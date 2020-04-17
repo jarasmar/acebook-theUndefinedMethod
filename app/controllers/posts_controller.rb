@@ -3,7 +3,6 @@
 class PostsController < ApplicationController
   respond_to :js, :html, :json
 
-
   def new
     @post = Post.new
   end
@@ -28,13 +27,12 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @comments = Comment.where(post_id: params[:id] )
+    @comments = Comment.where(post_id: params[:id])
     Comment.delete(@comments)
 
     @post = Post.find(params[:id])
     @post.destroy
     redirect_to(posts_url)
-
   end
 
   private
@@ -42,6 +40,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:message)
   end
-
-
 end

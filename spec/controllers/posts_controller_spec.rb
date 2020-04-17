@@ -18,7 +18,7 @@ RSpec.describe PostsController, type: :controller do
 
   describe 'POST /' do
     before(:each) do
-      @post = Post.create(user_id: @user.id, message: "Hello, world!")
+      @post = Post.create(user_id: @user.id, message: 'Hello, world!')
     end
 
     it 'responds with 200' do
@@ -30,8 +30,8 @@ RSpec.describe PostsController, type: :controller do
     end
 
     it 'edits a post' do
-      @post.update(user_id: @user.id, message: "This is a change")
-      expect(@post.message).to eq("This is a change")
+      @post.update(user_id: @user.id, message: 'This is a change')
+      expect(@post.message).to eq('This is a change')
     end
 
     it 'deletes a post' do

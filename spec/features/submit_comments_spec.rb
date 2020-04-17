@@ -1,8 +1,8 @@
+# frozen_string_literal: true
 
 require 'rails_helper'
 
 RSpec.feature 'Comment on posts', type: :feature do
-
   before(:each) do
     sign_up
     submit_post
@@ -22,18 +22,16 @@ RSpec.feature 'Comment on posts', type: :feature do
     expect(page).to have_content('Second comment')
   end
 
-  scenario "Can see newest comments first" do
+  scenario 'Can see newest comments first' do
     first_comment
     second_comment
 
-    expect("Second comment").to appear_before("First comment")
+    expect('Second comment').to appear_before('First comment')
   end
 
-  scenario "Can see how long ago someone posted their comment" do
+  scenario 'Can see how long ago someone posted their comment' do
     first_comment
 
-    expect(page).to have_content("less than a minute ago")
+    expect(page).to have_content('less than a minute ago')
   end
-
 end
-  

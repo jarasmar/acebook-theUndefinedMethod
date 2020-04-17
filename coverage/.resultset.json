@@ -13,7 +13,6 @@
           null,
           1,
           1,
-          null,
           null
         ]
       },
@@ -36,6 +35,8 @@
       },
       "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/helpers/like_posts_helper.rb": {
         "lines": [
+          null,
+          null,
           1,
           null
         ]
@@ -77,7 +78,6 @@
           1,
           1,
           null,
-          null,
           null
         ]
       },
@@ -99,15 +99,14 @@
           125,
           125,
           null,
-          null,
-          null,
           null
         ]
       },
       "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/controllers/like_posts_controller.rb": {
         "lines": [
-          1,
           null,
+          null,
+          1,
           1,
           4,
           null,
@@ -128,7 +127,6 @@
           null,
           1,
           1,
-          null,
           null,
           null
         ]
@@ -139,7 +137,6 @@
           null,
           1,
           1,
-          null,
           null,
           1,
           26,
@@ -173,19 +170,18 @@
           1,
           null,
           null,
-          null,
           1,
           null,
           1,
           25,
-          null,
-          null,
           null,
           null
         ]
       },
       "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/models/comment.rb": {
         "lines": [
+          null,
+          null,
           1,
           214,
           1,
@@ -193,7 +189,6 @@
           null,
           1,
           18,
-          null,
           null,
           null
         ]
@@ -215,13 +210,13 @@
           1,
           46,
           null,
-          null,
-          null,
           null
         ]
       },
       "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/models/like_comment.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -240,8 +235,9 @@
       },
       "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/controllers/like_comments_controller.rb": {
         "lines": [
-          1,
           null,
+          null,
+          1,
           1,
           4,
           null,
@@ -262,7 +258,6 @@
           null,
           1,
           1,
-          null,
           null,
           null
         ]
@@ -281,6 +276,7 @@
       },
       "/Users/sbell/Documents/Makers/acebook-theUndefinedMethod/app/jobs/application_job.rb": {
         "lines": [
+          null,
           null,
           null,
           null,
@@ -317,6 +313,6 @@
         }
       }
     },
-    "timestamp": 1587121509
+    "timestamp": 1587122965
   }
 }

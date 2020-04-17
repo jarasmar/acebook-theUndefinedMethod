@@ -4,17 +4,17 @@ class CommentsController < ApplicationController
   respond_to :js, :html, :json
 
   def create
-    @comment = params["comment"]["comment"]
+    @comment = params['comment']['comment']
     Comment.create(
-      comment: @comment, user_id: current_user.id, 
+      comment: @comment, user_id: current_user.id,
       post_id: session[:post_id]
     )
-    flash[:notice] = "Comment was created successfully"
+    flash[:notice] = 'Comment was created successfully'
     redirect_to posts_path
   end
 
   def new
-    session[:post_id] = params["post_id"]
+    session[:post_id] = params['post_id']
     @comment = Comment.new
   end
 
@@ -33,5 +33,4 @@ class CommentsController < ApplicationController
     @comment.destroy
     redirect_to posts_path
   end
-  
 end
