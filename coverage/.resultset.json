@@ -55,8 +55,8 @@
           1,
           null,
           1,
-          12,
-          12,
+          8,
+          8,
           null,
           null,
           null,
@@ -72,6 +72,25 @@
           null,
           null,
           1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          9,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
           0,
           null,
           null,
@@ -79,25 +98,6 @@
           0,
           0,
           null,
-          null,
-          1,
-          6,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
           0,
           0,
           0,
@@ -107,7 +107,7 @@
           1,
           null,
           1,
-          0,
+          2,
           null,
           null,
           null,
@@ -119,7 +119,7 @@
           null,
           null,
           1,
-          7,
+          18,
           1,
           1,
           1,
@@ -129,10 +129,83 @@
           null,
           null,
           1,
+          5,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/student/Code/Makers_Projects/Week_8_9/acebook-theUndefinedMethod/app/models/like_post.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/student/Code/Makers_Projects/Week_8_9/acebook-theUndefinedMethod/app/models/comment.rb": {
+        "lines": [
+          1,
+          27,
+          1,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/student/Code/Makers_Projects/Week_8_9/acebook-theUndefinedMethod/app/controllers/comments_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          null,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
           0,
           null,
           null,
+          1,
+          0,
+          0,
+          0,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/student/Code/Makers_Projects/Week_8_9/acebook-theUndefinedMethod/app/models/like_comment.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           null
         ]
       },
@@ -148,44 +221,6 @@
         "branches": {
         }
       },
-      "/Users/student/Code/Makers_Projects/Week_8_9/acebook-theUndefinedMethod/app/models/like_comment.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/student/Code/Makers_Projects/Week_8_9/acebook-theUndefinedMethod/app/models/like_post.rb": {
-        "lines": [
-          null,
-          null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/student/Code/Makers_Projects/Week_8_9/acebook-theUndefinedMethod/app/models/comment.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0
-        ],
-        "branches": {
-        }
-      },
       "/Users/student/Code/Makers_Projects/Week_8_9/acebook-theUndefinedMethod/app/jobs/application_job.rb": {
         "lines": [
           null,
@@ -195,49 +230,6 @@
           null,
           null,
           null
-        ],
-        "branches": {
-        }
-      },
-      "/Users/student/Code/Makers_Projects/Week_8_9/acebook-theUndefinedMethod/app/controllers/comments_controller.rb": {
-        "lines": [
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0
         ],
         "branches": {
         }
@@ -329,6 +321,6 @@
         }
       }
     },
-    "timestamp": 1587116829
+    "timestamp": 1587118084
   }
 }
