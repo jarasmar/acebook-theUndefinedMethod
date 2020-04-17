@@ -60,6 +60,14 @@ input {
   font-size: 1.7em;
 }
 
+.navbar-center {
+  position: absolute; 
+  left: 50%; 
+  margin-left: -50px !important; 
+  display: block; 
+  top: 9px;
+}
+
 .float-right {
   text-align: right;
 }
@@ -104,4 +112,23 @@ input {
 
 .bi-house-door:hover {
   color: #535C68;
+}
+
+@media screen and (max-width: 991px) {
+
+  .media-query-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .navbar-center-media {
+    text-align: center;
+    left: 50%; 
+    margin-left: 25px;
+    display: block; 
+    top: 9px;
+  }
+
 }
