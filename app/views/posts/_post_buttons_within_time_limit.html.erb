@@ -1,0 +1,6 @@
+<%= link_to edit_post_path(post) do %>
+  <button type="button" class="btn btn-primary">Edit</button>
+<% end %>
+<%= link_to new_comment_path(:post_id => post.id) do %>
+  <button type="button" class="btn btn-primary">Comment</button>
+<% end %>

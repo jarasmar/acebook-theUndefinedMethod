@@ -17,32 +17,6 @@
 
 
 
-body {
-  margin: 20px;
-  text-align: center;
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  letter-spacing: 1.3px;
-}
-
-button,
-input[type="submit"],
-input[type="button"] {
-  border: 1px solid #333;
-  color: #333;
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  font-size: 10px;
-  letter-spacing: 1.3px;
-  padding: 15px 30px;
-  text-decoration: none;
-  text-transform: uppercase;
-  display: inline-block;
-  margin-bottom: 10px;
-  box-shadow: 0 8px 6px -6px black;
-}
-
 form {
   display: flex;
   align-items: center;
@@ -83,7 +57,7 @@ input {
 }
 
 .comment-container {
-  border: 1px solid black;
+  border: 1px solid grey;
   padding: 0.4em;
   background-color: #e0e0eb;
 }
@@ -101,7 +75,17 @@ input {
   color: #555;
 }
 
-i:hover {
-    color: red;
-    cursor: pointer;
-  }
+.things-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-header {
+  color: white;
+  background-color:#007bff;
+}
+
+.bg-info {
+  background-color:#007bff !important;
+}

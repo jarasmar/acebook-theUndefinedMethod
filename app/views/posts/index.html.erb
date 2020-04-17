@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+<div style="margin-top: 50px;"></div>
+  <div class="container">
+    <% @posts.each do |post| %>
+      <div class="card text-center w-75 mx-auto mt-4">
+        <div class="card-header bg-info">
+          Posted by <%= "#{post.user.username}" %>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"><%= simple_format(post.message) %></h5>
+          <%# if time limit is reached%>
+          <% if post.user_id == current_user.id %>
+            <% if post.post_time_limit %> 
+              <%= render partial: "posts/post_buttons_within_time_limit", locals: {post: post} %>  
+            <% else %>
+              <%= render partial: "posts/post_buttons_not_within_time_limit", locals: {post: post} %>
+            <% end %>
+            <%= link_to 'Delete', post, :method => :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary" %>
+          <% else %>
+            <button type="button" class="btn btn-primary" onclick="return alert('You can only edit your own posts')">Edit</button>
+            <%= link_to new_comment_path(:post_id => post.id) do %>
+              <button type="button" class="btn btn-primary">Comment</button>
+            <% end%>
+            <button type="button" class="btn btn-primary" onclick="return alert('You can only delete your own posts')">Delete</button>
+=======
 <div class="post-container">
   <%= link_to new_post_path do %>
   <button>New post</button>
@@ -16,38 +41,26 @@
           <i class="fa fa-heart unlike fa-2x"></i>
           <% else %>
           <i class="fa fa-heart like fa-2x"></i>
+>>>>>>> master
           <% end %>
-      <% end %>
-
-      <p> <%= LikePost.where(post_id: post.id).length %> Likes </p>
-
-    <% if post.user_id == current_user.id %>
-
-      <% if post.post_time_limit %>
-
-        <%= link_to edit_post_path(post) do %>
-          <button>Edit</button>
-        <% end %>
-      <% else %>
-        <input type="button" value="Edit" onclick="return alert('You can only edit posts within the first 10 minutes')">
-      <% end %>
-
-      <button>
-        <%= link_to 'Delete', post, :method => :delete, data: { confirm: "Are you sure?" } %>
-      </button>
-
-    <% else %>
-      <input type="button" value="Edit" onclick="return alert('You can only edit your own post')">
-      <input type="button" value="Delete" onclick="return alert('You can only delete your own post')">
-    <% end %>
-
-    <button>
-      <%= link_to "New comment", new_comment_path(:post_id => post.id) %>
-    </button>
-
-    <%= render "posts/comments", post: post %>
-
+        </div>
+        <div>
+          <%= link_to like_posts_path(post_id: post.id), method: :post do %>
+            <% @likePosts = LikePost.where(user_id: current_user.id, post_id: post.id).length %>
+            <% if @likePosts == 0 %>
+              <i class="fa fa-heart unlike fa-2x"></i>
+            <% else %>
+              <i class="fa fa-heart like fa-2x"></i>
+            <% end %>
+          <% end %> 
+        <div>
+          <%= LikePost.where(post_id: post.id).length %> Likes
+        </div> 
+      </div>
+      <div class="card-footer text-muted">
+        <%= post.created_at.strftime("%H:%M, %d/%m/%Y")%>
+      </div>
+      <%= render "posts/comments", post: post %>
     </div>
-
   <% end %>
-</div>
+  

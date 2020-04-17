@@ -1,0 +1,5 @@
+<button type="button" class="btn btn-primary" onclick="return alert('You can only edit your own posts')">Edit</button>
+  <%= link_to new_comment_path(:post_id => post.id) do %>
+<button type="button" class="btn btn-primary">Comment</button>
+<% end%>
+<button type="button" class="btn btn-primary" onclick="return alert('You can only delete your own posts')">Delete</button>

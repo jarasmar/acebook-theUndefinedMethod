@@ -1,6 +1,8 @@
 <!DOCTYPE html>
   <html>
     <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
       <title>Acebook</title>
       <%= csrf_meta_tags %>
       <link href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
@@ -10,7 +12,6 @@
     </head>
 
     <body>
-
     <nav>
       <p class="navbar-text float-right">
         <% if user_signed_in? %>
@@ -20,13 +21,16 @@
         <% end %>
       </p>
     </nav>
-
+      
       <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
+        <div style="margin-top: 40px;">
+          <p class="alert alert-success"><%= notice %></p>
+        </div>
       <% end %>
       <% if alert %>
         <p class="alert alert-danger"><%= alert %></p>
       <% end %>
+      
 
       <%= yield %>
 
