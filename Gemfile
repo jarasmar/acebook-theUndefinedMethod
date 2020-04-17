@@ -54,6 +54,7 @@ group :development, :test do
   gem 'orderly'
   # "time travel" and "time freezing" to test time-dependent code
   gem 'timecop'
+  gem 'coveralls', require: false
 end
 
 # group :production do
