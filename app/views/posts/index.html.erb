@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div style="margin-top: 50px;"></div>
   <div class="container">
     <% @posts.each do |post| %>
@@ -22,26 +21,6 @@
               <button type="button" class="btn btn-primary">Comment</button>
             <% end%>
             <button type="button" class="btn btn-primary" onclick="return alert('You can only delete your own posts')">Delete</button>
-=======
-<div class="post-container">
-  <%= link_to new_post_path do %>
-  <button>New post</button>
-  <% end %>
-</div>
-
-<div class="post-container">
-  <% @posts.each do |post| %>
-  <div class="post-style">
-    <p><%= simple_format(post.message) %>
-      <%= post.created_at.strftime("%H:%M, %d/%m/%Y") + "  posted by #{post.user.username}" %></p>
-    
-      <%= link_to like_posts_path(post_id: post.id), method: :post, class: "like_post_test" do %>
-        <% @likePosts = LikePost.where(user_id: current_user.id, post_id: post.id).length %>
-          <% if @likePosts == 0 %>
-          <i class="fa fa-heart unlike fa-2x"></i>
-          <% else %>
-          <i class="fa fa-heart like fa-2x"></i>
->>>>>>> master
           <% end %>
         </div>
         <div>
