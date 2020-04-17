@@ -1,7 +1,7 @@
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 
-  <a href="/posts" class="navbar-brand">ACEBOOK</a>
+  <a href="/posts" class="navbar-brand" style="color: #007bff">ACEBOOK</a>
 
 
   <%= link_to new_post_path do %>
@@ -22,7 +22,7 @@
     </a>
     <ul class="nav navbar-nav navbar-right">
       <li>
-         <a class="navbar-brand">Hello <%=  current_user.username %></a>
+         <a class="navbar-brand" style="color: #007bff; font-size: 1.3em">Hello <%=  current_user.username %></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="/posts">

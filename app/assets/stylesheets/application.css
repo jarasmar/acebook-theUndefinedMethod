@@ -52,6 +52,14 @@ input {
   letter-spacing: 1.3px;
 }
 
+.navbar {
+  min-height: 65px;
+}
+
+.navbar-brand {
+  font-size: 1.7em;
+}
+
 .float-right {
   text-align: right;
 }
