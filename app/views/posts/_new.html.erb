@@ -1,12 +1,12 @@
 <div style="margin-top: 50px;"></div>
 <div class="card text-center mx-auto mt-4" style="width: 32rem;">
-<h5 class="card-header text-left pl-3 post-text">Create post</h5>
+  <h5 class="card-header text-left pl-3 post-text">Create post</h5>
   <%= form_for Post.new do |form| %>
     <br>
     <%= form.text_area :message, placeholder: "Anything to say?", :cols => 56, :rows => 5 %>
     </br>
     <div class="card-footer" style="width: 32rem;">
-    <%= form.submit "Submit", class: "btn btn-primary" %>
+      <%= form.submit "Submit", class: "btn btn-primary" %>
     </div>
   <% end %>
 </div>
