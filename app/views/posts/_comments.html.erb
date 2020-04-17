@@ -7,7 +7,7 @@
       <p><strong><%= comment.user.username %></strong>: <%= comment.comment %><br></p>
       <p><%= time_ago_in_words post.created_at %> ago</p>
 
-      <%= link_to like_comments_path(comment_id: comment.id), method: :post do %>
+      <%= link_to like_comments_path(comment_id: comment.id), method: :post, class: "like_comment_test" do %>
         <% @likeComments = LikeComment.where(user_id: current_user.id, comment_id: comment.id).length %>
         <% if @likeComments == 0 %>
           <i class="fa fa-heart unlike fa-2x"></i>
