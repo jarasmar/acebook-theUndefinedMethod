@@ -89,3 +89,11 @@ input {
 .bg-info {
   background-color:#007bff !important;
 }
+
+.bi-house-door {
+  color: grey;
+}
+
+.bi-house-door:hover {
+  color: #535C68;
+}
