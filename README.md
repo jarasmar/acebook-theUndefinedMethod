@@ -5,6 +5,7 @@
 ## Makers Academy - Week 8 (group project)
 
 [![Build Status](https://travis-ci.com/Kittaru87/acebook-theUndefinedMethod.svg?branch=master)](https://travis-ci.com/Kittaru87/acebook-theUndefinedMethod)
+[![Coverage Status](https://coveralls.io/repos/github/Kittaru87/acebook-theUndefinedMethod/badge.svg?branch=master)](https://coveralls.io/github/Kittaru87/acebook-theUndefinedMethod?branch=master)
 
 Contributors: [Jara Santamaria Martinez](https://github.com/jarasmar), [Sophia Bell](https://github.com/Kittaru87), [Rafa Hernandez](https://github.com/rafahg), [Nima Soufiani](https://github.com/Nimzyow)
 
