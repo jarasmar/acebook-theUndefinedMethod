@@ -21,7 +21,7 @@ RSpec.feature 'Edit comments', type: :feature do
   scenario "Cannot edit someone else's comment" do
     click_link 'Logout'
     sign_up_second_user
-    click_button "Edit comment"
+    click_button "Edit Comment"
 
     expect(page).not_to have_button("Save Changes")
   end
