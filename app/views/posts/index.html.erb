@@ -3,7 +3,7 @@
     <% @posts.each do |post| %>
       <div class="card text-center w-75 mx-auto mt-4">
         <div class="card-header bg-info">
-          Posted by <%= "Posted by #{post.user.username}" %>
+          Posted by <%= "#{post.user.username}" %>
         </div>
         <div class="card-body">
           <h5 class="card-title"><%= simple_format(post.message) %></h5>
