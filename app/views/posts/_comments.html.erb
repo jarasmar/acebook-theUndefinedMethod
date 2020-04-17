@@ -20,10 +20,10 @@
       <% if comment.user_id == current_user.id %>
         <% if comment.comment_time_limit %>
           <%= link_to edit_comment_path(comment) do %>
-            <button type="button" class="btn btn-primary">Edit comment</button>
+            <button type="button" class="btn btn-primary edit-comment-btn">Edit comment</button>
           <% end %> 
         <% else %>
-          <button type="button" class="btn btn-primary" onclick="return alert('You can only edit posts within the first 10 minutes')">Edit comment</button> 
+          <button type="button" class="btn btn-primary edit-comment-btn" onclick="return alert('You can only edit posts within the first 10 minutes')">Edit comment</button> 
         <% end %>
           <%= link_to 'Delete comment', {controller: "comments", action: "destroy", id: comment.id}, data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-primary" %>
       <% else %>

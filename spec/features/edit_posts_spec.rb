@@ -27,12 +27,7 @@ RSpec.feature 'Edit posts', type: :feature do
     click_link 'Logout'
     sign_up_second_user
     click_button "Edit"
-    expect(page).not_to have_content "First message"
-
-    # I dont understand why it would not have 'First message'
-    # Second user cant edit because its not the author
-    # What happens is a flash alert
-    # expect(page).to have_content "You can only edit your own posts"
+    expect(page).not_to have_link "Save Changes"
   end
 
   scenario "user cannot update a post after 10 minutes" do
