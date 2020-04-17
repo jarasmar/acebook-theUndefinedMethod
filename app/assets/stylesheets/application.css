@@ -57,7 +57,7 @@ input {
 }
 
 .comment-container {
-  border: 1px solid black;
+  border: 1px solid grey;
   padding: 0.4em;
   background-color: #e0e0eb;
 }
@@ -81,3 +81,11 @@ input {
   flex-direction: column;
 }
 
+.card-header {
+  color: white;
+  background-color:#007bff;
+}
+
+.bg-info {
+  background-color:#007bff !important;
+}
