@@ -11,13 +11,22 @@ RSpec.feature 'Edit posts', type: :feature do
     expect(page).to have_button "Save Changes"
   end
 
+  scenario "Can edit their own post" do
+    sign_up
+    submit_post
+    click_link "Edit"
+    fill_in "post[message]", with: "updated post"
+    click_button("Save Changes")
+
+    expect(page).to have_content("updated post")
+  end
+
   scenario "user cannot update someone else's post" do
     sign_up
     submit_post
     click_link 'Logout'
     sign_up_second_user
     click_link "Edit"
-    # This is because of the pop up box but I can't work out how to test for that in particular"
     expect(page).not_to have_content "First message"
   end
 

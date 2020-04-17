@@ -1,14 +1,70 @@
-# AceBook - The Undefined Method
+# AceBook
+
+~ Presented by **The Undefined Method** ~
 
 ## Makers Academy - Week 8 (group project)
 
 Contributors: [Jara Santamaria Martinez](https://github.com/jarasmar), [Sophia Bell](https://github.com/Kittaru87), [Rafa Hernandez](https://github.com/rafahg), [Nima Soufiani](https://github.com/Nimzyow)
 
-[Outline](#outline) | [Specifications](#specifications) | [Planning](#planning) | [Installation Instructions](#installation-instructions) | [Tech stack](#tech-stack) | [Challenges](#challenges)
+[Brief](#Brief) | [Setup](#Setup) |[Running the application](#Running-the-application) |[Running tests](#Running-tests) | [Specifications](#specifications) | [Planning](#planning) | [Installation Instructions](#installation-instructions) | [Tech stack](#tech-stack) | [Challenges](#challenges)
 
-## Outline
+# `Brief`
 
 Work as a team to build a clone of Facebook
+
+# `Setup`
+
+# To install dependencies
+
+On the root of the project, run:
+
+```
+$ bundle install
+```
+this will install our dependencies
+
+# To set up DataBase
+
+If you do not have Postgresql installed 
+
+On the root of the project create the database by running:
+
+```
+$ rails db:create
+```
+this will create the database
+
+Next we will need to create the tables.
+
+On the root of the project, run:
+
+```
+$ rails db:migrate
+```
+
+Congratulations! Your database is now setup!
+
+# `Running the application`
+
+To run the application, run the following command in the root of the project and enjoy :)
+
+```
+$ rails server
+```
+
+# `running tests`
+
+To run the tests, make sure you are in the root of the project and run:
+
+```
+$ rspec
+```
+
+
+## First setup (if user does not have PostgreSQL installed)
+
+
+
 
 ## Specifications
 
@@ -35,6 +91,18 @@ I want to be able to log in
 As a registered user
 So I can share my experiences
 I want to be able to make a post
+
+As a registered user
+So I can make a comment on a post
+I want to be able to comment on a post
+
+As a registered user
+So I can like a post
+I want to be able to like a post
+
+As a registered user
+So I can like a comment
+I want to be able to like a comment
 ```
 
 ## Planning
@@ -52,40 +120,39 @@ I want to be able to make a post
 
 **Day 4**
 
-## Installation Instructions
+# `Tools used during the project`
 
-First, clone this repository. Then:
+## planning phase
 
-```bash
-> bundle install
-> bin/rails db:create
-> bin/rails db:migrate
+- google docs
+- google sheets
+- trello
+- slack
+- zoom
+- miro
 
-> bundle exec rspec # Run the tests to ensure it works
-> bin/rails server # Start the server at localhost:3000
+## Technologies
 
-gem install bundler # for the latest bundler
-```
-
-## Tech stack
-
-Back-end:
-
-* Ruby/Rails
-
-Front-end:
-* CSS/HTML
-* Javascript
-* JQuery
-
-Testing:
-
-* Capybara
-* RSpec
-* SimpleCov
-
-Linting:
-
-* Rubocop
+- Ruby on Rails
+- Capybara
+- RSpec
+- SimpleCov
+- Rubocop
+- Ruby
+- CSS/HTML
+- JavaScript
+- JQuery
 
 ## Challenges
+
+
+# `Team who collaborated on this project`
+
+## and their daily roles
+
+| Name           | Day 1        | Day 2        | Day 3        | Day 4        | Day 5        |
+| :------------- | :----------- | :----------- | :----------- | :----------- | :----------- |
+| Sophia Bell   | Technician/helper| Scrum Master| Leader       | Scribe/reporter        | Technician/helper       |
+| Nima Soufiani    | Scrum master | Leader       | Scribe/reporter   | Technician/helper       | Scrum Master        |
+| Rafa Hernandez| Leader       | Scribe/reporter | Technician/helper       | Scrum Master   | Leader       |
+| Jara Santamaria Martinez | Technician/helper| Scrum Master       | Leader | Leader       | Scribe/reporter   |
