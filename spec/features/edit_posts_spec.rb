@@ -26,8 +26,8 @@ RSpec.feature 'Edit posts', type: :feature do
     submit_post
     click_link 'Logout'
     sign_up_second_user
-    click_link "Edit"
-    expect(page).not_to have_content "First message"
+    click_button "Edit"
+    expect(page).not_to have_link "Save Changes"
   end
 
   scenario "user cannot update a post after 10 minutes" do

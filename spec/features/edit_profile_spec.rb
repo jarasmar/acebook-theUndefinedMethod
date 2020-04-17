@@ -6,7 +6,7 @@ RSpec.feature 'Edit Profile', type: :feature do
 
   before(:each) do
     sign_up
-    click_link "Edit profile"
+    click_link "edit_profile"
   end
 
   scenario "Change your username" do
@@ -14,7 +14,7 @@ RSpec.feature 'Edit Profile', type: :feature do
     fill_in 'Current password', with: "testtest"
     click_button "Update"
 
-    expect(page).to have_content("Logged in as Updated username")
+    expect(page).to have_content("Hello Updated username")
   end
 
   scenario "Change your email" do

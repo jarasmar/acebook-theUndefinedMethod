@@ -21,7 +21,7 @@ RSpec.feature 'Delete comments', type: :feature do
     click_link 'Logout'
     sign_up_second_user
     visit '/posts'
-    click_button "delete comment"
+    click_button "Delete Comment"
 
     expect(page).to have_content('First comment')
   end
