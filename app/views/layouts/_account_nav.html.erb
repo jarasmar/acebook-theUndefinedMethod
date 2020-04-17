@@ -1,28 +1,28 @@
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 
-  <a href="/posts" class="navbar-brand">ACEBOOK</a>
+  <a href="/posts" class="navbar-brand" style="color: #007bff">ACEBOOK</a>
 
 
   <%= link_to new_post_path do %>
-      <button type="button" class="btn btn-outline-primary btn-lg" style="position: absolute; left: 50%; margin-left: -50px !important; display: block; top: 9px;">
+      <button type="button" class="btn btn-outline-primary btn-lg navbar-center">
       New post</button>
   <% end %>
 
 <!--  Show this only on mobile to medium screens  -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <button class="navbar-toggler" style="align-items: center" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" style="align-items: center"></span>
   </button>
 
 <!--  Use flexbox utility classes to change how the child elements are justified  -->
-  <div class="collapse navbar-collapse justify-content-between" id="navbarToggle">
+  <div class="collapse navbar-collapse justify-content-between media-query-nav" id="navbarToggle">
 
 <!--   Show this only lg screens and up   -->
     <a class="navbar-brand d-lg-none d-lg-block">
     </a>
     <ul class="nav navbar-nav navbar-right">
       <li>
-         <a class="navbar-brand">Hello <%=  current_user.username %></a>
+         <a class="navbar-brand navbar-center-media" style="color: #007bff; font-size: 1.3em">Hello <%=  current_user.username %></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="/posts">

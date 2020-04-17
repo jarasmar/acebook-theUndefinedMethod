@@ -1,7 +1,7 @@
 <div style="margin-top: 50px;"></div>
   <div class="container">
     <% @posts.each do |post| %>
-      <div class="card text-center w-75 mx-auto mt-4">
+      <div class="card text-center w-75 mx-auto mt-4 shadow-post">
         <div class="card-header bg-info">
           Posted by <%= "#{post.user.username}" %>
         </div>
@@ -35,9 +35,9 @@
         <div>
           <%= LikePost.where(post_id: post.id).length %> Likes
         </div> 
-      </div>
-      <div class="card-footer text-muted">
-        <%= post.created_at.strftime("%H:%M, %d/%m/%Y")%>
+        <div class="mt-2 mb-2">
+          <%= post.created_at.strftime("%H:%M, %d/%m/%Y")%>
+        </div>
       </div>
       <%= render "posts/comments", post: post %>
     </div>
