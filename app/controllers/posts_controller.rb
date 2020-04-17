@@ -2,7 +2,7 @@
 
 class PostsController < ApplicationController
   respond_to :js, :html, :json
-
+  
   def new
     @post = Post.new
   end
