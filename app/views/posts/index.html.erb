@@ -35,9 +35,9 @@
         <div>
           <%= LikePost.where(post_id: post.id).length %> Likes
         </div> 
-      </div>
-      <div class="card-footer text-muted">
-        <%= post.created_at.strftime("%H:%M, %d/%m/%Y")%>
+        <div class="mt-2 mb-2">
+          <%= post.created_at.strftime("%H:%M, %d/%m/%Y")%>
+        </div>
       </div>
       <%= render "posts/comments", post: post %>
     </div>
