@@ -19,24 +19,16 @@
 
       <% if comment.user_id == current_user.id %>
         <% if comment.comment_time_limit %>
-          <%# to delete %>
-          <a href="<%= edit_comment_path(comment)%>">
-            <input type="button" value="Edit comment">
-          </a>
-          <%# to delete end %>
           <%= link_to edit_comment_path(comment) do %>
             <button type="button" class="btn btn-primary">Edit comment</button>
-          <% end %>
+          <% end %> 
         <% else %>
-          <button type="button" class="btn btn-primary" onclick="return alert('You can only edit posts within the first 10 minutes')">Edit</button> 
+          <button type="button" class="btn btn-primary" onclick="return alert('You can only edit posts within the first 10 minutes')">Edit comment</button> 
         <% end %>
           <%= link_to 'Delete comment', {controller: "comments", action: "destroy", id: comment.id}, data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-primary" %>
       <% else %>
-        <%= link_to edit_comment_path(comment) do %>
-          <button type="button" class="btn btn-primary">Edit comment</button>
-        <% end %>
-        <input type="button" value="Edit comment" onclick="return alert('You can only edit your own comment')">
-        <input type="button" value="delete comment" onclick="return alert('You can only delete your own comment')">
+        <button type="button" class="btn btn-primary" onclick="return alert('You can only edit your own comment')">Edit Comment</button>
+        <button type="button" class="btn btn-primary" onclick="return alert('You can only delete your own comment')">Delete Comment</button>
       <% end %>
     </div>
   </div>
