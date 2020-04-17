@@ -29,12 +29,6 @@ input {
   padding: 5px;
 }
 
-.post-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
 .post-style {
   border: 1px solid grey;
   margin: 10px;
@@ -68,15 +62,14 @@ input {
   top: 9px;
 }
 
+.shadow-post {
+  box-shadow: 0 6px 10px -6px black;
+}
+
 .float-right {
   text-align: right;
 }
 
-.comment-container {
-  border: 1px solid grey;
-  padding: 0.4em;
-  background-color: #e0e0eb;
-}
 
 .text-left {
   padding: 0.4em;
