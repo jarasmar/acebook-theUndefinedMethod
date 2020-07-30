@@ -2,6 +2,8 @@
 
 ~ Presented by **The Undefined Method** ~
 
+Demo: https://the-undefined-method.herokuapp.com/users/sign_in
+
 ## Makers Academy - Week 8 (group project)
 
 [![Build Status](https://travis-ci.com/Kittaru87/acebook-theUndefinedMethod.svg?branch=master)](https://travis-ci.com/Kittaru87/acebook-theUndefinedMethod)
